@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
+    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -164,17 +165,80 @@
   .m-auto {
     margin: auto;
   }
+  .mt-\[20px\] {
+    margin-top: 20px;
+  }
+  .ml-\[10\%\] {
+    margin-left: 10%;
+  }
+  .ml-\[20\%\] {
+    margin-left: 20%;
+  }
+  .ml-\[25\%\] {
+    margin-left: 25%;
+  }
+  .ml-\[50\%\] {
+    margin-left: 50%;
+  }
+  .ml-\[50\] {
+    margin-left: 50;
+  }
+  .ml-\[50px\] {
+    margin-left: 50px;
+  }
   .flex {
     display: flex;
   }
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
+  .h-\[400px\] {
+    height: 400px;
+  }
+  .h-\[500px\] {
+    height: 500px;
+  }
+  .w-\[100\%\] {
+    width: 100%;
+  }
   .w-\[150px\] {
     width: 150px;
   }
+  .w-\[200px\] {
+    width: 200px;
+  }
+  .w-\[230px\] {
+    width: 230px;
+  }
+  .w-\[250px\] {
+    width: 250px;
+  }
+  .w-\[300px\] {
+    width: 300px;
+  }
+  .w-\[400px\] {
+    width: 400px;
+  }
+  .w-\[450px\] {
+    width: 450px;
+  }
+  .w-\[500px\] {
+    width: 500px;
+  }
   .max-w-300 {
     max-width: calc(var(--spacing) * 300);
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -185,6 +249,13 @@
   .gap-\[20px\] {
     gap: 20px;
   }
+  .rounded-\[10px\] {
+    border-radius: 10px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-3 {
     border-style: var(--tw-border-style);
     border-width: 3px;
@@ -192,8 +263,20 @@
   .border-\[black\] {
     border-color: black;
   }
+  .bg-\[\#263238\] {
+    background-color: #263238;
+  }
+  .bg-\[grey\] {
+    background-color: grey;
+  }
+  .p-\[1px\] {
+    padding: 1px;
+  }
   .p-\[10px\] {
     padding: 10px;
+  }
+  .p-\[15px\] {
+    padding: 15px;
   }
   .p-\[20px\] {
     padding: 20px;
@@ -204,8 +287,44 @@
   .text-\[20px\] {
     font-size: 20px;
   }
+  .text-\[40px\] {
+    font-size: 40px;
+  }
+  .text-\[50px\] {
+    font-size: 50px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
   .text-\[black\] {
     color: black;
+  }
+  .text-\[c\] {
+    color: c;
+  }
+  .text-\[grey\] {
+    color: grey;
+  }
+  .text-\[white\] {
+    color: white;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .sm\:m-auto {
+    @media (width >= 40rem) {
+      margin: auto;
+    }
+  }
+  .md\:m-auto {
+    @media (width >= 48rem) {
+      margin: auto;
+    }
   }
   .lg\:block {
     @media (width >= 64rem) {
@@ -222,8 +341,52 @@
       display: none !important;
     }
   }
+  .lg\:max-w-\[1200\] {
+    @media (width >= 64rem) {
+      max-width: 1200;
+    }
+  }
+  .lg\:max-w-\[1200px\] {
+    @media (width >= 64rem) {
+      max-width: 1200px;
+    }
+  }
+  .lg\:max-w-\[1200pxl\:\] {
+    @media (width >= 64rem) {
+      max-width: 1200pxl:;
+    }
+  }
+  .lg\:max-w-\[1200pxl\] {
+    @media (width >= 64rem) {
+      max-width: 1200pxl;
+    }
+  }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
+  .lg\:justify-between {
+    @media (width >= 64rem) {
+      justify-content: space-between;
+    }
+  }
+  .lg\:text-start {
+    @media (width >= 64rem) {
+      text-align: start;
+    }
+  }
 }
 @property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -232,6 +395,8 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }
